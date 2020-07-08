@@ -1,0 +1,8 @@
+*.class
+*target*
+*test*
+*actual*
+*out*
+*.exe
+*build*
+*result*
