@@ -53,6 +53,8 @@ impl Solution {
     }
 }
 
+// 4ms, 1.9MB
+
 #[cfg(test)]
 mod tests {
     use super::*;
