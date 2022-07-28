@@ -23,17 +23,14 @@ impl ListNode {
     }
 
     pub fn to_vec(self) -> Vec<i32> {
-        let mut vec = Vec::new();
-        vec.push(self.val);
+        let mut vec = vec![self.val];
 
-        let mut tmp = self.next;
+        let mut next = self.next;
 
-        while tmp != None {
-            let ( tmp_val, tmp_next ) = match *tmp.take().unwrap() {
-                ListNode { val, next } => (val, next)
-            };
-            vec.push(tmp_val);
-            tmp = tmp_next;
+        while let Some(n) = next {
+            vec.push(n.val.to_owned());
+            next = n.next;
+
         }
 
         vec
